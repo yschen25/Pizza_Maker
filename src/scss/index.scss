@@ -1,0 +1,9 @@
+@import '~compass-mixins/lib/compass/_css3.scss';
+@import '~compass-mixins/lib/_animate.scss';
+
+.test {
+    width: 500px;
+    height: 500px;
+    background-size: cover;
+    background-image: url('../img/bacon.png');
+}
