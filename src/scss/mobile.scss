@@ -3,4 +3,32 @@
 
 @media screen and (max-width: 767px) {
 
+    h1 {
+        font-size: 2rem;
+    }
+
+    .pizzaWrapper {
+        width: 90%;
+        padding: 2vh 2vw;
+
+        .pizza {
+            padding: 30vw;
+
+        }
+    }
+
+    .menu{
+        width: 100%;
+        flex-wrap: wrap;
+
+        .item{
+            width: 45%;
+            margin: 5px;
+            padding: 2px;
+
+            .text{
+                font-size: 1rem;
+            }
+        }
+    }
 }

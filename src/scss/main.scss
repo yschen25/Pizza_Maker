@@ -1,9 +1,116 @@
 @import '~compass-mixins/lib/compass/_css3.scss';
 @import '~compass-mixins/lib/_animate.scss';
 
-.test {
-    width: 500px;
-    height: 500px;
-    background-size: cover;
-    background-image: url('../img/bacon.png');
+body {
+    background: #ffcc6f;
+    font-family: "Open Sans", "Trebuchet MS", "Comic Sans MS", "Constantia", sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.6rem;
+}
+
+.pizzaWrapper {
+    width: 50%;
+    padding: 2vh 2vw;
+    margin: auto;
+    background: url('../img/napkin.png') no-repeat center center;
+
+    .pizza {
+        padding: 10vw;
+        background: url('../img/pizza2.png') no-repeat center center;
+        background-size: contain;
+    }
+}
+
+.menu {
+    margin: 3vh auto auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .item {
+        background: #fefefe;
+        border-radius: 5px;
+        width: 20%;
+        margin: 10px;
+        display: flex;
+        padding: 5px;
+        cursor: pointer;
+        position: relative;
+
+        .img {
+            width: 30%;
+            height: 50px;
+        }
+
+        .bacon {
+            background: url('../img/bacon.png') no-repeat top center;
+            background-size: contain;
+        }
+
+        .mushroom {
+            background: url('../img/mushroom.png') no-repeat top center;
+            background-size: contain;
+        }
+
+        .pepperoni {
+            background: url('../img/pepperoni.png') no-repeat top center;
+            background-size: contain;
+        }
+
+        .onion {
+            background: url('../img/onion.png') no-repeat top center;
+            background-size: contain;
+        }
+
+        .pineapple {
+            background: url('../img/pineapple.png') no-repeat top center;
+            background-size: contain;
+        }
+
+        .pepper {
+            background: url('../img/pepper.png') no-repeat top center;
+            background-size: contain;
+        }
+
+        .basil {
+            background: url('../img/basil.png') no-repeat top center;
+            background-size: contain;
+        }
+
+        .shrimp {
+            background: url('../img/shrimp.png') no-repeat top center;
+            background-size: contain;
+        }
+
+        .tomato {
+            background: url('../img/tomato.png') no-repeat top center;
+            background-size: contain;
+        }
+
+        .cucumber {
+            background: url('../img/cucumber.png') no-repeat top center;
+            background-size: contain;
+        }
+
+        .chilli {
+            background: url('../img/chilli.png') no-repeat top center;
+            background-size: contain;
+        }
+
+        .olive {
+            background: url('../img/olive.png') no-repeat top center;
+            background-size: contain;
+        }
+
+        .text {
+            font-size: 1.5rem;
+            line-height: 50px;
+            font-weight: 600;
+        }
+
+    }
 }

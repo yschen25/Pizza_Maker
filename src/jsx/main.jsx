@@ -1,13 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MenuList from './../component/MenuList.jsx';
 
-class Test extends React.Component {
+class Pizza extends React.Component {
+    constructor(props){
+        super(props);
+        this.choose = this.choose.bind(this);
+    }
+
+    choose(e){
+        console.log(e.target);
+    }
+
     render() {
         return <div>
-            <h1>TEST</h1>
-            <div class="test"></div>
+            <h1>Pizza Maker</h1>
+            <div className="pizzaWrapper">
+                <div className="pizza"></div>
+            </div>
+            <div className="menu">
+                <MenuList choose={this.choose}/>
+            </div>
         </div>
     }
 }
 
-ReactDOM.render(<Test />, document.getElementById('app'));
+ReactDOM.render(<Pizza />, document.getElementById('app'));
