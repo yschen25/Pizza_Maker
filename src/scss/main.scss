@@ -18,9 +18,92 @@ h1 {
     background: url('../img/napkin.png') no-repeat center center;
 
     .pizza {
-        padding: 10vw;
+        width: 400px;
+        height: 400px;
         background: url('../img/pizza2.png') no-repeat center center;
         background-size: contain;
+        position: relative;
+        margin: auto;
+
+        .bacon-list {
+            width: 70px;
+            height: 70px;
+            background: url('../img/bacon.png') no-repeat center center;
+            background-size: contain;
+            position: absolute;
+        }
+
+        .bacon-1 {
+            transform: rotate(-4deg);
+            top: 67px;
+            right: 74px;
+        }
+
+        .bacon-2 {
+            transform: rotate(60deg);
+            top: 43px;
+            right: 183px;
+        }
+
+        .bacon-3 {
+            transform: rotate(87deg);
+            top: 97px;
+            left: 60px;
+        }
+
+        .bacon-4 {
+            transform: rotate(30deg);
+            top: 150px;
+            right: 99px;
+        }
+
+        .bacon-5 {
+            transform: rotate(60deg);
+            bottom: 32px;
+            right: 111px;
+        }
+
+        .bacon-6 {
+            transform: rotate(89deg);
+            bottom: 93px;
+            left: 45px;
+        }
+
+        .bacon-7 {
+            transform: rotate(172deg);
+            bottom: 46px;
+            right: 202px;
+        }
+
+        .bacon-8 {
+            transform: rotate(237deg);
+            bottom: 161px;
+            left: 37px;
+        }
+
+        .bacon-9 {
+            transform: rotate(172deg);
+            bottom: 111px;
+            right: 50px;
+        }
+
+        .bacon-10 {
+            transform: rotate(192deg);
+            bottom: 120px;
+            right: 202px;
+        }
+
+        .bacon-11 {
+            transform: rotate(251deg);
+            bottom: 109px;
+            right: 125px;
+        }
+
+        .bacon-12 {
+            transform: rotate(170deg);
+            top: 108px;
+            right: 169px;
+        }
     }
 }
 
@@ -47,62 +130,62 @@ h1 {
         }
 
         .bacon {
-            background: url('../img/bacon.png') no-repeat top center;
+            background: url('../img/bacon.png') no-repeat center center;
             background-size: contain;
         }
 
         .mushroom {
-            background: url('../img/mushroom.png') no-repeat top center;
+            background: url('../img/mushroom.png') no-repeat center center;
             background-size: contain;
         }
 
         .pepperoni {
-            background: url('../img/pepperoni.png') no-repeat top center;
+            background: url('../img/pepperoni.png') no-repeat center center;
             background-size: contain;
         }
 
         .onion {
-            background: url('../img/onion.png') no-repeat top center;
+            background: url('../img/onion.png') no-repeat center center;
             background-size: contain;
         }
 
         .pineapple {
-            background: url('../img/pineapple.png') no-repeat top center;
+            background: url('../img/pineapple.png') no-repeat center center;
             background-size: contain;
         }
 
         .pepper {
-            background: url('../img/pepper.png') no-repeat top center;
+            background: url('../img/pepper.png') no-repeat center center;
             background-size: contain;
         }
 
         .basil {
-            background: url('../img/basil.png') no-repeat top center;
+            background: url('../img/basil.png') no-repeat center center;
             background-size: contain;
         }
 
         .shrimp {
-            background: url('../img/shrimp.png') no-repeat top center;
+            background: url('../img/shrimp.png') no-repeat center center;
             background-size: contain;
         }
 
         .tomato {
-            background: url('../img/tomato.png') no-repeat top center;
+            background: url('../img/tomato.png') no-repeat center center;
             background-size: contain;
         }
 
         .cucumber {
-            background: url('../img/cucumber.png') no-repeat top center;
+            background: url('../img/cucumber.png') no-repeat center center;
             background-size: contain;
         }
 
         .chilli {
-            background: url('../img/chilli.png') no-repeat top center;
+            background: url('../img/chilli.png') no-repeat center center;
             background-size: contain;
         }
 
         .olive {
-            background: url('../img/olive.png') no-repeat top center;
+            background: url('../img/olive.png') no-repeat center center;
             background-size: contain;
         }
 
@@ -110,6 +193,7 @@ h1 {
             font-size: 1.5rem;
             line-height: 50px;
             font-weight: 600;
+            margin-left: 15px;
         }
 
     }

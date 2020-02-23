@@ -10,11 +10,6 @@
     .pizzaWrapper {
         width: 90%;
         padding: 2vh 2vw;
-
-        .pizza {
-            padding: 30vw;
-
-        }
     }
 
     .menu{
@@ -22,12 +17,37 @@
         flex-wrap: wrap;
 
         .item{
-            width: 45%;
+            width: 40%;
             margin: 5px;
-            padding: 2px;
+            padding: 6px;
+
+            .img {
+                width: 25%;
+            }
 
             .text{
                 font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1300px) {
+
+    .pizzaWrapper {
+        width: 90%;
+        padding: 2vh 2vw;
+    }
+
+    .menu{
+        width: 100%;
+        flex-wrap: wrap;
+
+        .item{
+            width: 20%;
+
+            .text{
+                font-size: 1.3rem;
             }
         }
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import menuList from './../data/Data.jsx'
+import menuList from '../data/Data.jsx'
 
 class MenuList extends React.Component{
 
@@ -16,8 +16,3 @@ class MenuList extends React.Component{
 }
 
 export default MenuList;
-
-// RWD
-// ingredients on the pizza
-// check
-// project structure

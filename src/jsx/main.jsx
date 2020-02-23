@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MenuList from './../component/MenuList.jsx';
+import MenuList from './component/MenuList.jsx';
+import Topping from './component/Topping.jsx';
 
 class Pizza extends React.Component {
     constructor(props){
@@ -16,7 +17,9 @@ class Pizza extends React.Component {
         return <div>
             <h1>Pizza Maker</h1>
             <div className="pizzaWrapper">
-                <div className="pizza"></div>
+                <div className="pizza">
+                    <Topping />
+                </div>
             </div>
             <div className="menu">
                 <MenuList choose={this.choose}/>
