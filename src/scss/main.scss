@@ -79,6 +79,7 @@ h1 {
             transform: rotate(237deg);
             bottom: 161px;
             left: 37px;
+            z-index: 1;
         }
 
         .bacon-9 {
@@ -103,6 +104,740 @@ h1 {
             transform: rotate(170deg);
             top: 108px;
             right: 169px;
+        }
+
+        .mushroom-list {
+            width: 50px;
+            height: 50px;
+            background: url('../img/mushroom.png') no-repeat center center;
+            background-size: contain;
+            position: absolute;
+        }
+
+        .mushroom-1 {
+            transform: rotate(-64deg);
+            top: 103px;
+            right: 42px;
+        }
+
+        .mushroom-2 {
+            transform: rotate(60deg);
+            top: 43px;
+            right: 150px;
+        }
+
+        .mushroom-3 {
+            transform: rotate(33deg);
+            top: 97px;
+            left: 105px;
+        }
+
+        .mushroom-4 {
+            transform: rotate(30deg);
+            top: 150px;
+            right: 99px;
+        }
+
+        .mushroom-5 {
+            transform: rotate(60deg);
+            bottom: 32px;
+            right: 111px;
+        }
+
+        .mushroom-6 {
+            transform: rotate(23deg);
+            bottom: 79px;
+            left: 81px;
+        }
+
+        .mushroom-7 {
+            transform: rotate(172deg);
+            bottom: 34px;
+            right: 202px;
+        }
+
+        .mushroom-8 {
+            transform: rotate(237deg);
+            bottom: 196px;
+            left: 37px;
+        }
+
+        .mushroom-9 {
+            transform: rotate(172deg);
+            bottom: 91px;
+            right: 50px;
+        }
+
+        .mushroom-10 {
+            transform: rotate(192deg);
+            bottom: 164px;
+            right: 202px;
+        }
+
+        .mushroom-11 {
+            transform: rotate(251deg);
+            bottom: 109px;
+            right: 125px;
+        }
+
+        .mushroom-12 {
+            transform: rotate(170deg);
+            top: 108px;
+            right: 169px;
+        }
+
+        .pepperoni-list {
+            width: 50px;
+            height: 50px;
+            background: url('../img/pepperoni.png') no-repeat center center;
+            background-size: contain;
+            position: absolute;
+        }
+
+        .pepperoni-1 {
+            transform: rotate(-64deg);
+            top: 103px;
+            right: 42px;
+        }
+
+        .pepperoni-2 {
+            transform: rotate(60deg);
+            top: 43px;
+            right: 150px;
+        }
+
+        .pepperoni-3 {
+            transform: rotate(33deg);
+            top: 97px;
+            left: 105px;
+        }
+
+        .pepperoni-4 {
+            transform: rotate(30deg);
+            top: 150px;
+            right: 99px;
+        }
+
+        .pepperoni-5 {
+            transform: rotate(60deg);
+            bottom: 32px;
+            right: 111px;
+        }
+
+        .pepperoni-6 {
+            transform: rotate(23deg);
+            bottom: 79px;
+            left: 81px;
+        }
+
+        .pepperoni-7 {
+            transform: rotate(23deg);
+            bottom: 79px;
+            left: 81px;
+        }
+
+        .pepperoni-8 {
+            transform: rotate(23deg);
+            bottom: 79px;
+            left: 81px;
+        }
+
+        .onion-list {
+            width: 60px;
+            height: 60px;
+            background: url('../img/onion.png') no-repeat center center;
+            background-size: contain;
+            position: absolute;
+        }
+
+        .onion-1 {
+            transform: rotate(-37deg);
+            top: 129px;
+            right: 42px;
+            z-index: 1;
+        }
+
+        .onion-2 {
+            transform: rotate(60deg);
+            top: 19px;
+            right: 170px;
+        }
+
+        .onion-3 {
+            transform: rotate(165deg);
+            top: 48px;
+            left: 82px;
+        }
+
+        .onion-4 {
+            transform: rotate(30deg);
+            top: 188px;
+            right: 99px;
+        }
+
+        .onion-5 {
+            transform: rotate(91deg);
+            bottom: 48px;
+            right: 87px;
+        }
+
+        .onion-6 {
+            transform: rotate(23deg);
+            bottom: 43px;
+            left: 88px;
+        }
+
+        .onion-7 {
+            transform: rotate(23deg);
+            top: 79px;
+            right: 110px;
+        }
+
+        .onion-8 {
+            transform: rotate(106deg);
+            bottom: 200px;
+            left: 77px;
+        }
+
+        .onion-9 {
+            transform: rotate(-3deg);
+            bottom: 145px;
+            right: 22px;
+        }
+
+        .onion-10 {
+            transform: rotate(97deg);
+            bottom: 135px;
+            left: 26px;
+        }
+
+        .onion-11 {
+            transform: rotate(23deg);
+            bottom: 189px;
+            left: 112px;
+        }
+
+        .onion-12 {
+            transform: rotate(23deg);
+            bottom: 79px;
+            left: 176px;
+        }
+
+        .pineapple-list {
+            width: 60px;
+            height: 60px;
+            background: url('../img/pineapple.png') no-repeat center center;
+            background-size: contain;
+            position: absolute;
+        }
+
+        .pineapple-1 {
+            transform: rotate(-37deg);
+            top: 166px;
+            right: 42px;
+            z-index: 1;
+        }
+
+        .pineapple-2 {
+            transform: rotate(37deg);
+            top: 136px;
+            right: 170px;
+        }
+
+        .pineapple-3 {
+            transform: rotate(165deg);
+            top: 60px;
+            left: 58px;
+        }
+
+        .pineapple-4 {
+            transform: rotate(30deg);
+            top: 188px;
+            right: 99px;
+        }
+
+        .pineapple-5 {
+            transform: rotate(91deg);
+            bottom: 48px;
+            right: 87px;
+        }
+
+        .pineapple-6 {
+            transform: rotate(-20deg);
+            bottom: 81px;
+            left: 123px;
+        }
+
+        .pineapple-7 {
+            transform: rotate(23deg);
+            top: 79px;
+            right: 110px;
+        }
+
+        .pineapple-8 {
+            transform: rotate(106deg);
+            bottom: 140px;
+            left: 77px;
+        }
+
+        .pepper-list {
+            width: 60px;
+            height: 60px;
+            background: url('../img/pepper.png') no-repeat center center;
+            background-size: contain;
+            position: absolute;
+        }
+
+        .pepper-1 {
+            transform: rotate(-37deg);
+            top: 129px;
+            right: 42px;
+            z-index: 1;
+        }
+
+        .pepper-2 {
+            transform: rotate(60deg);
+            top: 19px;
+            right: 170px;
+        }
+
+        .pepper-3 {
+            transform: rotate(165deg);
+            top: 48px;
+            left: 82px;
+        }
+
+        .pepper-4 {
+            transform: rotate(30deg);
+            top: 188px;
+            right: 99px;
+        }
+
+        .pepper-5 {
+            transform: rotate(91deg);
+            bottom: 48px;
+            right: 87px;
+        }
+
+        .pepper-6 {
+            transform: rotate(23deg);
+            bottom: 43px;
+            left: 88px;
+        }
+
+        .pepper-7 {
+            transform: rotate(23deg);
+            top: 79px;
+            right: 110px;
+        }
+
+        .pepper-8 {
+            transform: rotate(106deg);
+            bottom: 200px;
+            left: 77px;
+        }
+
+        .pepper-9 {
+            transform: rotate(-3deg);
+            bottom: 145px;
+            right: 22px;
+        }
+
+        .pepper-10 {
+            transform: rotate(97deg);
+            bottom: 135px;
+            left: 26px;
+        }
+
+        .basil-list {
+            width: 30px;
+            height: 30px;
+            background: url('../img/basil.png') no-repeat center center;
+            background-size: contain;
+            position: absolute;
+        }
+
+        .basil-1 {
+            transform: rotate(-37deg);
+            top: 129px;
+            right: 42px;
+        }
+
+        .basil-2 {
+            transform: rotate(60deg);
+            top: 16px;
+            right: 128px;
+        }
+
+        .basil-3 {
+            transform: rotate(165deg);
+            top: 48px;
+            left: 82px;
+        }
+
+        .basil-4 {
+            transform: rotate(30deg);
+            top: 188px;
+            right: 99px;
+        }
+
+        .basil-5 {
+            transform: rotate(91deg);
+            bottom: 48px;
+            right: 87px;
+        }
+
+        .basil-6 {
+            transform: rotate(23deg);
+            bottom: 43px;
+            left: 88px;
+        }
+
+        .basil-7 {
+            transform: rotate(23deg);
+            top: 79px;
+            right: 110px;
+        }
+
+        .basil-8 {
+            transform: rotate(-29deg);
+            bottom: 179px;
+            left: 155px;
+        }
+
+        .basil-9 {
+            transform: rotate(-3deg);
+            bottom: 145px;
+            right: 22px;
+        }
+
+        .basil-10 {
+            transform: rotate(97deg);
+            bottom: 135px;
+            left: 26px;
+        }
+
+        .basil-11 {
+            transform: rotate(23deg);
+            bottom: 189px;
+            left: 112px;
+        }
+
+        .basil-12 {
+            transform: rotate(23deg);
+            bottom: 79px;
+            left: 176px;
+            z-index: 1;
+        }
+
+        .basil-13 {
+            transform: rotate(53deg);
+            bottom: 23px;
+            left: 143px;
+        }
+
+        .basil-14 {
+            transform: rotate(23deg);
+            bottom: 158px;
+            left: 76px;
+        }
+
+        .basil-15 {
+            transform: rotate(23deg);
+            bottom: 179px;
+            left: 17px;
+        }
+
+        .basil-16 {
+            transform: rotate(23deg);
+            bottom: 69px;
+            left: 59px;
+        }
+
+        .shrimp-list {
+            width: 60px;
+            height: 60px;
+            background: url('../img/shrimp.png') no-repeat center center;
+            background-size: contain;
+            position: absolute;
+        }
+
+        .shrimp-1 {
+            transform: rotate(-37deg);
+            top: 129px;
+            right: 142px;
+        }
+
+        .shrimp-2 {
+            transform: rotate(308deg);
+            top: 19px;
+            right: 227px;
+        }
+
+        .shrimp-3 {
+            transform: rotate(133deg);
+            top: 82px;
+            left: 127px;
+            z-index: 1;
+        }
+
+        .shrimp-4 {
+            transform: rotate(90deg);
+            top: 32px;
+            right: 87px;
+        }
+
+        .shrimp-5 {
+            transform: rotate(-24deg);
+            bottom: 66px;
+            right: 55px;
+            z-index: 1;
+        }
+
+        .shrimp-6 {
+            transform: rotate(-20deg);
+            bottom: 66px;
+            left: 170px;
+        }
+
+        .shrimp-7 {
+            transform: rotate(178deg);
+            top: 179px;
+            right: 10px;
+        }
+
+        .shrimp-8 {
+            transform: rotate(192deg);
+            bottom: 200px;
+            left: 10px;
+            z-index: 1;
+        }
+
+        .shrimp-9 {
+            transform: rotate(-3deg);
+            bottom: 52px;
+            left: 74px;
+        }
+
+        .shrimp-10 {
+            transform: rotate(51deg);
+            bottom: 146px;
+            left: 100px;
+            z-index: 1;
+        }
+
+        .tomato-list {
+            width: 50px;
+            height: 50px;
+            background: url('../img/tomato.png') no-repeat center center;
+            background-size: contain;
+            position: absolute;
+        }
+
+        .tomato-1 {
+            transform: rotate(-37deg);
+            top: 67px;
+            right: 50px;
+        }
+
+        .tomato-2 {
+            transform: rotate(37deg);
+            top: 168px;
+            right: 170px;
+        }
+
+        .tomato-3 {
+            transform: rotate(165deg);
+            top: 117px;
+            left: 146px;
+        }
+
+        .tomato-4 {
+            transform: rotate(30deg);
+            top: 13px;
+            right: 210px;
+        }
+
+        .tomato-5 {
+            transform: rotate(91deg);
+            bottom: 87px;
+            right: 96px;
+        }
+
+        .tomato-6 {
+            transform: rotate(-20deg);
+            bottom: 81px;
+            left: 43px;
+        }
+
+        .cucumber-list {
+            width: 50px;
+            height: 50px;
+            background: url('../img/cucumber.png') no-repeat center center;
+            background-size: contain;
+            position: absolute;
+        }
+
+        .cucumber-1 {
+            transform: rotate(-37deg);
+            top: 166px;
+            right: 42px;
+        }
+
+        .cucumber-2 {
+            transform: rotate(37deg);
+            top: 136px;
+            right: 170px;
+        }
+
+        .cucumber-3 {
+            transform: rotate(165deg);
+            top: 106px;
+            left: 46px;
+        }
+
+        .cucumber-4 {
+            transform: rotate(30deg);
+            top: 218px;
+            right: 170px;
+        }
+
+        .cucumber-5 {
+            transform: rotate(91deg);
+            bottom: 48px;
+            right: 145px;
+        }
+
+        .cucumber-6 {
+            transform: rotate(-20deg);
+            bottom: 81px;
+            left: 123px;
+        }
+
+        .cucumber-7 {
+            transform: rotate(23deg);
+            top: 117px;
+            right: 75px;
+        }
+
+        .cucumber-8 {
+            transform: rotate(106deg);
+            bottom: 182px;
+            left: 102px;
+        }
+
+        .chilli-list {
+            width: 40px;
+            height: 40px;
+            background: url('../img/chilli.png') no-repeat center center;
+            background-size: contain;
+            position: absolute;
+        }
+
+        .chilli-1 {
+            transform: rotate(-14deg);
+            top: 166px;
+            right: 17px;
+            z-index: 1;
+        }
+
+        .chilli-2 {
+            transform: rotate(14deg);
+            top: 32px;
+            right: 101px;
+        }
+
+        .chilli-3 {
+            transform: rotate(187deg);
+            top: 114px;
+            left: 34px;
+        }
+
+        .chilli-4 {
+            transform: rotate(168deg);
+            top: 224px;
+            right: 190px;
+        }
+
+        .chilli-5 {
+            transform: rotate(91deg);
+            bottom: 48px;
+            right: 87px;
+        }
+
+        .chilli-6 {
+            transform: rotate(-20deg);
+            bottom: 32px;
+            left: 182px;
+        }
+
+        .olive-list {
+            width: 20px;
+            height: 20px;
+            background: url('../img/olive.png') no-repeat center center;
+            background-size: contain;
+            position: absolute;
+        }
+
+        .olive-1 {
+            transform: rotate(-37deg);
+            top: 166px;
+            right: 42px;
+            z-index: 1;
+        }
+
+        .olive-2 {
+            transform: rotate(37deg);
+            top: 136px;
+            right: 170px;
+        }
+
+        .olive-3 {
+            transform: rotate(165deg);
+            top: 60px;
+            left: 58px;
+        }
+
+        .olive-4 {
+            transform: rotate(30deg);
+            top: 218px;
+            right: 170px;
+        }
+
+        .olive-5 {
+            transform: rotate(91deg);
+            bottom: 48px;
+            right: 87px;
+        }
+
+        .olive-6 {
+            transform: rotate(-20deg);
+            bottom: 81px;
+            left: 123px;
+        }
+
+        .olive-7 {
+            transform: rotate(23deg);
+            top: 79px;
+            right: 110px;
+        }
+
+        .olive-8 {
+            transform: rotate(106deg);
+            bottom: 200px;
+            left: 77px;
+        }
+
+        .olive-9 {
+            transform: rotate(-3deg);
+            bottom: 145px;
+            right: 22px;
+        }
+
+        .olive-10 {
+            transform: rotate(97deg);
+            bottom: 135px;
+            left: 26px;
         }
     }
 }

@@ -9,7 +9,7 @@ class Topping extends React.Component {
 
             let html = [];
             for (let i = 1; i <= val.number; i++) {
-                 html.push(<div key={i} className={`bacon-list bacon-${i}`}></div>)
+                 html.push(<div key={i} className={`${val.text}-list ${val.text}-${i}`}></div>)
             }
 
             console.log(html);
