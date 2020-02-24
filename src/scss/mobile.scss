@@ -10,6 +10,10 @@
     .pizzaWrapper {
         width: 90%;
         padding: 2vh 2vw;
+
+        .pizza{
+            transform: scale(0.9);
+        }
     }
 
     .menu{
@@ -36,7 +40,7 @@
 
     .pizzaWrapper {
         width: 90%;
-        padding: 2vh 2vw;
+        padding: 6vh 3vw;
     }
 
     .menu{

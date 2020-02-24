@@ -5,18 +5,19 @@ class Topping extends React.Component {
 
     render() {
 
-        let list =  menuList.map((val) => {
+        let list = menuList.map((val) => {
 
             let html = [];
             for (let i = 1; i <= val.number; i++) {
-                 html.push(<div key={i} className={`${val.text}-list ${val.text}-${i}`}></div>)
+                if (val.isCheck) {
+                    html.push(<div key={i} className={`${val.text}-list ${val.text}-${i}`}></div>)
+                }
             }
 
-            console.log(html);
             return html;
         });
 
-        return(
+        return (
             <div>{list}</div>
         )
     }
