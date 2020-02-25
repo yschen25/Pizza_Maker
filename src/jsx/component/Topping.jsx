@@ -1,15 +1,14 @@
 import React from 'react';
-import menuList from '../data/Data.jsx'
 
 class Topping extends React.Component {
 
     render() {
 
-        let list = menuList.map((val) => {
+        let list = this.props.toppingsList.map((val) => {
 
             let html = [];
             for (let i = 1; i <= val.number; i++) {
-                if (val.isCheck) {
+                if(val.isShow === 'show'){
                     html.push(<div key={i} className={`${val.text}-list ${val.text}-${i}`}></div>)
                 }
             }

@@ -2,20 +2,49 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import MenuList from './component/MenuList.jsx';
 import Topping from './component/Topping.jsx';
-import menuList from './data/Data.jsx';
+import toppingsList from './data/Data.jsx';
 
 class Pizza extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.choose = this.choose.bind(this);
-        this.state = menuList;
+        this.chooseToppings = this.chooseToppings.bind(this);
+        this.state = toppingsList;
     }
 
-    choose(e){
-        let text = e.target.getAttribute('data-name');
-        // this.state[parseInt(e.target.id)-1] =  {'key': parseInt(e.target.id),'text': text, 'number': 12,'isCheck': true};
-        this.setState({'key': parseInt(e.target.id),'text': text, 'number': 12,'isCheck': true});
-        console.log(this.state);
+    // Choose toppings
+    chooseToppings(e) {
+
+        console.log(e.target.id);
+        console.log(this.state.selectedToppings);
+
+        if (this.state.selectedToppings.isShow === 'show') {
+            this.setState({
+                selectedToppings: [...this.state.selectedToppings.filter(val => {
+
+                        console.log(val.key);
+                        console.log(e.target.id);
+                        return val.text !== e.target.text
+                    }
+                )]
+            });
+
+            console.log(this.state.selectedToppings);
+        } else {
+
+            const selectedTopping = {
+                'key': e.target.id,
+                'text': e.target.getAttribute('data-name'),
+                'number': e.target.getAttribute('data-number'),
+                'isShow': 'show'
+            };
+
+            this.setState({
+                selectedToppings: [...this.state.selectedToppings, selectedTopping]
+            });
+
+            console.log(this.state.selectedToppings);
+        }
+
     }
 
     render() {
@@ -23,14 +52,14 @@ class Pizza extends React.Component {
             <h1>Pizza Maker</h1>
             <div className="pizzaWrapper">
                 <div className="pizza">
-                    <Topping />
+                    <Topping toppingsList={this.state.selectedToppings}/>
                 </div>
             </div>
             <div className="menu">
-                <MenuList choose={this.choose}/>
+                <MenuList chooseToppings={this.chooseToppings}/>
             </div>
         </div>
     }
 }
 
-ReactDOM.render(<Pizza />, document.getElementById('app'));
+ReactDOM.render(<Pizza/>, document.getElementById('app'));
