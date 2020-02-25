@@ -6,13 +6,12 @@ class Topping extends React.Component {
 
         let list = this.props.toppingsList.map((val) => {
 
-            let html = [];
-            for (let i = 1; i <= val.number; i++) {
-                if(val.isShow === 'show'){
-                    html.push(<div key={i} className={`${val.text}-list ${val.text}-${i}`}></div>)
-                }
-            }
+            let arr = val.split('/');
 
+            let html = [];
+            for (let i = 1; i <= arr[1]; i++) {
+                html.push(<div key={i} className={`${arr[0]}-list ${arr[0]}-${i}`}></div>);
+            }
             return html;
         });
 

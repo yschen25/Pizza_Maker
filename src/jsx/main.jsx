@@ -14,37 +14,12 @@ class Pizza extends React.Component {
     // Choose toppings
     chooseToppings(e) {
 
-        console.log(e.target.id);
-        console.log(this.state.selectedToppings);
+        // Combine topping's name and quantity
+        const selectedTopping = e.target.id + '/' + e.target.getAttribute('data-number');
 
-        if (this.state.selectedToppings.isShow === 'show') {
-            this.setState({
-                selectedToppings: [...this.state.selectedToppings.filter(val => {
-
-                        console.log(val.key);
-                        console.log(e.target.id);
-                        return val.text !== e.target.text
-                    }
-                )]
-            });
-
-            console.log(this.state.selectedToppings);
-        } else {
-
-            const selectedTopping = {
-                'key': e.target.id,
-                'text': e.target.getAttribute('data-name'),
-                'number': e.target.getAttribute('data-number'),
-                'isShow': 'show'
-            };
-
-            this.setState({
-                selectedToppings: [...this.state.selectedToppings, selectedTopping]
-            });
-
-            console.log(this.state.selectedToppings);
-        }
-
+        this.state.selectedToppings.includes(selectedTopping) ?
+            this.setState({selectedToppings: [...this.state.selectedToppings.filter(val => val !== selectedTopping)]}):
+            this.setState({selectedToppings: [...this.state.selectedToppings, selectedTopping]});
     }
 
     render() {
