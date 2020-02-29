@@ -14,11 +14,21 @@ class Pizza extends React.Component {
     // Choose toppings
     chooseToppings(e) {
 
+        // Show check icon
+        let check = e.target.getAttribute('data-check');
+        let newCheck = (check === 'check') ? 'noCheck' : 'check';
+        this.setState({
+            toppings: {
+                ...this.state.toppings,
+                [e.target.id]: {'number': e.target.getAttribute('data-number'), 'isCheck': newCheck}
+            }
+        });
+
         // Combine topping's name and quantity
         const selectedTopping = e.target.id + '/' + e.target.getAttribute('data-number');
 
         this.state.selectedToppings.includes(selectedTopping) ?
-            this.setState({selectedToppings: [...this.state.selectedToppings.filter(val => val !== selectedTopping)]}):
+            this.setState({selectedToppings: [...this.state.selectedToppings.filter(val => val !== selectedTopping)]}) :
             this.setState({selectedToppings: [...this.state.selectedToppings, selectedTopping]});
     }
 
@@ -27,11 +37,11 @@ class Pizza extends React.Component {
             <h1>Pizza Maker</h1>
             <div className="pizzaWrapper">
                 <div className="pizza">
-                    <Topping toppingsList={this.state.selectedToppings}/>
+                    <Topping selectedToppings={this.state.selectedToppings}/>
                 </div>
             </div>
             <div className="menu">
-                <MenuList chooseToppings={this.chooseToppings}/>
+                <MenuList toppings={this.state.toppings} chooseToppings={this.chooseToppings}/>
             </div>
         </div>
     }

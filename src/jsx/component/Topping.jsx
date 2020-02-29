@@ -1,10 +1,13 @@
 import React from 'react';
 
 class Topping extends React.Component {
+    constructor(props) {
+        super(props);
+        this.toppingHtml = this.toppingHtml.bind(this);
+    }
 
-    render() {
-
-        let list = this.props.toppingsList.map((val) => {
+    toppingHtml(){
+        return this.props.selectedToppings.map((val) => {
 
             let arr = val.split('/');
 
@@ -14,9 +17,12 @@ class Topping extends React.Component {
             }
             return html;
         });
+    }
+
+    render() {
 
         return (
-            <div>{list}</div>
+            <div>{this.toppingHtml()}</div>
         )
     }
 }

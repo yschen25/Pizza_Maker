@@ -34,7 +34,6 @@ h1 {
             position: absolute;
         }
 
-
         .bacon-1 {
             transform: rotate(-4deg);
             top: 30px;
@@ -240,8 +239,8 @@ h1 {
 
         .pepperoni-8 {
             transform: rotate(23deg);
-            bottom: 79px;
-            left: 81px;
+            bottom: 113px;
+            left: 51px;
         }
 
         .onion-list {
@@ -251,7 +250,7 @@ h1 {
             background-size: contain;
             position: absolute;
 
-            &:nth-child(3n){
+            &:nth-child(3n) {
                 width: 60px;
                 height: 60px;
                 background: url('../img/onion2.png') no-repeat center center;
@@ -396,7 +395,7 @@ h1 {
             background-size: contain;
             position: absolute;
 
-            &:nth-child(3n){
+            &:nth-child(3n) {
                 width: 50px;
                 height: 50px;
                 background: url('../img/pepper2.png') no-repeat center center;
@@ -950,5 +949,20 @@ h1 {
             pointer-events: none;
         }
 
+        .check {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #e4e3e3;
+            border-radius: 100%;
+            right: .5vw;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+            &.isChecked {
+                background: #1d9e68;
+            }
+        }
     }
 }

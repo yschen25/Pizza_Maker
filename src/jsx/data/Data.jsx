@@ -1,17 +1,17 @@
 const toppingsList = {
     toppings: {
-        bacon: 12,
-        mushroom: 12,
-        pepperoni: 8,
-        onion: 12,
-        pineapple: 8,
-        pepper: 10,
-        basil: 16,
-        shrimp: 10,
-        tomato: 6,
-        cucumber: 8,
-        chilli: 6,
-        olive: 10,
+        bacon: {'number' : 12, 'isCheck' : 'noCheck'},
+        mushroom: {'number' : 8, 'isCheck' : 'noCheck'},
+        pepperoni: {'number' : 8, 'isCheck' : 'noCheck'},
+        onion: {'number' : 12, 'isCheck' : 'noCheck'},
+        pineapple: {'number' : 8, 'isCheck' : 'noCheck'},
+        pepper: {'number' : 10, 'isCheck' : 'noCheck'},
+        basil: {'number' : 16, 'isCheck' : 'noCheck'},
+        shrimp: {'number' : 10, 'isCheck' : 'noCheck'},
+        tomato: {'number' : 6, 'isCheck' : 'noCheck'},
+        cucumber: {'number' : 8, 'isCheck' : 'noCheck'},
+        chilli: {'number' : 6, 'isCheck' : 'noCheck'},
+        olive: {'number' : 10, 'isCheck' : 'noCheck'}
     },
     selectedToppings: []
 };
