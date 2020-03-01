@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Topping extends React.Component {
     constructor(props) {
@@ -6,12 +7,12 @@ class Topping extends React.Component {
         this.toppingHtml = this.toppingHtml.bind(this);
     }
 
-    toppingHtml(){
+    toppingHtml() {
         return this.props.selectedToppings.map((val) => {
 
-            let arr = val.split('/');
+            const arr = val.split('/');
 
-            let html = [];
+            const html = [];
             for (let i = 1; i <= arr[1]; i++) {
                 html.push(<div key={i} className={`${arr[0]}-list ${arr[0]}-${i}`}></div>);
             }
@@ -20,11 +21,18 @@ class Topping extends React.Component {
     }
 
     render() {
-
         return (
             <div>{this.toppingHtml()}</div>
-        )
+        );
     }
 }
+
+Topping.defaultProps = {
+    selectedToppings: '',
+};
+
+Topping.propTypes = {
+    selectedToppings: PropTypes.instanceOf(Array)
+};
 
 export default Topping;

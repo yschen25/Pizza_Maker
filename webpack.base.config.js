@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const devMode = true;
+let isDev = process.env.NODE_ENV === "dev";
 
 module.exports = {
     entry: {
@@ -11,8 +11,11 @@ module.exports = {
         filename: 'dist/js/bundle.[hash].js',
         path: path.resolve('./'),
     },
+    resolve: {
+        extensions: ['.js', '.jsx'],
+    },
     plugins: [
-        // 當使用 webpack 打包時，創建一個 html 文件，並把 webpack 打包後的靜態文件自動插入到這個 html 文件中
+        // Insert a bundle file into new html file automatically when run webpack -p
         new HtmlWebpackPlugin({
             template: './src/main.html',
             filename: 'index.html',
@@ -48,10 +51,13 @@ module.exports = {
                 }
             },
             {
+                /* The postcss-loader should be placed after css-loader and style-loader,
+                   but before other preprocessor loaders like e.g sass|less|stylus-loader */
                 test: /\.(css|scss|sass)$/,
                 use: [
-                     devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+                    isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
                     'css-loader',
+                    'postcss-loader',
                     'sass-loader'
                 ]
             },
@@ -59,7 +65,7 @@ module.exports = {
                 test: /\.(gif|jpg|png|svg)$/,
                 use: [
                     {
-                        loader: "file-loader",
+                        loader: 'file-loader',
                         options: {
                             outputPath: './dist/images',
                             name: 'i.[hash].[ext]'

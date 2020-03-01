@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MenuList from './component/MenuList.jsx';
-import Topping from './component/Topping.jsx';
-import toppingsList from './data/Data.jsx';
+import MenuList from './component/MenuList';
+import Topping from './component/Topping';
+import toppingsList from './data/Data';
 
 class Pizza extends React.Component {
     constructor(props) {
@@ -15,12 +15,12 @@ class Pizza extends React.Component {
     chooseToppings(e) {
 
         // Show check icon
-        let check = e.target.getAttribute('data-check');
-        let newCheck = (check === 'check') ? 'noCheck' : 'check';
+        const check = e.target.getAttribute('data-check');
+        const newCheck = (check === 'check') ? 'noCheck' : 'check';
         this.setState({
             toppings: {
                 ...this.state.toppings,
-                [e.target.id]: {'number': e.target.getAttribute('data-number'), 'isCheck': newCheck}
+                [e.target.id]: { number: e.target.getAttribute('data-number'), isCheck: newCheck }
             }
         });
 
@@ -28,23 +28,25 @@ class Pizza extends React.Component {
         const selectedTopping = e.target.id + '/' + e.target.getAttribute('data-number');
 
         this.state.selectedToppings.includes(selectedTopping) ?
-            this.setState({selectedToppings: [...this.state.selectedToppings.filter(val => val !== selectedTopping)]}) :
-            this.setState({selectedToppings: [...this.state.selectedToppings, selectedTopping]});
+            this.setState({selectedToppings: [...this.state.selectedToppings.filter(val => val !== selectedTopping)] }) :
+            this.setState({selectedToppings: [...this.state.selectedToppings, selectedTopping] });
     }
 
     render() {
-        return <div>
-            <h1>Pizza Maker</h1>
-            <div className="pizzaWrapper">
-                <div className="pizza">
-                    <Topping selectedToppings={this.state.selectedToppings}/>
+        return (
+            <div>
+                <h1>Pizza Maker</h1>
+                <div className="pizzaWrapper">
+                    <div className="pizza">
+                        <Topping selectedToppings={this.state.selectedToppings} />
+                    </div>
+                </div>
+                <div className="menu">
+                    <MenuList toppings={this.state.toppings} chooseToppings={this.chooseToppings} />
                 </div>
             </div>
-            <div className="menu">
-                <MenuList toppings={this.state.toppings} chooseToppings={this.chooseToppings}/>
-            </div>
-        </div>
+        );
     }
 }
 
-ReactDOM.render(<Pizza/>, document.getElementById('app'));
+ReactDOM.render(<Pizza />, document.getElementById('app'));
