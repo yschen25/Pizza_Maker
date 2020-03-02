@@ -48,11 +48,9 @@ class Pizza extends React.Component {
     }
 
     sendMessage() {
-        console.log('ffffff');
-        axios.post('https://my-json-server.typicode.com/yschen25/Pizza_maker/db',{
-            name: 'kaka',
-            msg: 'gooooood'
-        }).then(
+        axios.post('https://my-json-server.typicode.com/yschen25/Pizza_maker/messageBoard', {
+                name: 'kaka', msg: 'gooooood'}, {headers: { 'Content-Type': 'application/json' }}
+        ).then(
             function (response) {
                 console.log(response);
             }
