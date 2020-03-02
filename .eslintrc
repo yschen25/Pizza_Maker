@@ -48,7 +48,6 @@
   },
   "plugins": [
     "react",
-    "react-hooks",
-    "prettier"
+    "react-hooks"
   ]
 }

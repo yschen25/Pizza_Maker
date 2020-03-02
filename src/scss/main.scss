@@ -963,3 +963,31 @@ h1 {
         }
     }
 }
+
+.msgBoard{
+    margin-top: 50px;
+    text-align: center;
+
+    .msgTitle{
+        display: inline-block;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    .msgInput{
+        margin: auto auto auto 10px;
+        border: none;
+        width: 20vw;
+        height: 4vh;
+    }
+
+    .msgBtn{
+        display: inline-block;
+        margin: auto auto auto 10px;
+        width: 10vw;
+        padding: 1vh;
+        background: #7fa8da;
+        border-radius: 5px;
+    }
+
+}

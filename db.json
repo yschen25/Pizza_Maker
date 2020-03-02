@@ -49,5 +49,6 @@
       "isCheck": "noCheck"
     }
   },
-  "selectedToppings": []
+  "selectedToppings": [],
+  "messageBoard" : {}
 }

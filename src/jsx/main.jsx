@@ -2,27 +2,29 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import MenuList from './component/MenuList';
 import Topping from './component/Topping';
-import toppingsList from './data/Data';
-import axios from 'axios';
+import MessageBoard from './component/MessageBoard';
+import getNewList from './data/Data';
+import axios from 'axios/index';
 
 class Pizza extends React.Component {
     constructor(props) {
         super(props);
         this.chooseToppings = this.chooseToppings.bind(this);
-        this.state = {toppings : {}, selectedToppings: []}
+        this.sendMessage = this.sendMessage.bind(this);
+        this.state = {toppings: {}, selectedToppings: []};
     }
 
-    componentDidMount(){
-        let _this = this;
-        axios.get('https://my-json-server.typicode.com/yschen25/Pizza_maker/db')
-            .then(function (response) {
-                console.log('response', response.data);
-                _this.setState({toppings : response.data});
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+    // Render
+    componentDidMount() {
+        this.getJsonData();
     }
+
+    // Get menu list
+    getJsonData = () => {
+        const _this = this;
+        const data = getNewList();
+        data.then((res) => _this.setState({toppings: res}));
+    };
 
     // Choose toppings
     chooseToppings(e) {
@@ -33,7 +35,7 @@ class Pizza extends React.Component {
         this.setState({
             toppings: {
                 ...this.state.toppings,
-                [e.target.id]: { number: e.target.getAttribute('data-number'), isCheck: newCheck }
+                [e.target.id]: {number: e.target.getAttribute('data-number'), isCheck: newCheck}
             }
         });
 
@@ -41,8 +43,24 @@ class Pizza extends React.Component {
         const selectedTopping = e.target.id + '/' + e.target.getAttribute('data-number');
 
         this.state.selectedToppings.includes(selectedTopping) ?
-            this.setState({selectedToppings: [...this.state.selectedToppings.filter(val => val !== selectedTopping)] }) :
-            this.setState({selectedToppings: [...this.state.selectedToppings, selectedTopping] });
+            this.setState({selectedToppings: [...this.state.selectedToppings.filter(val => val !== selectedTopping)]}) :
+            this.setState({selectedToppings: [...this.state.selectedToppings, selectedTopping]});
+    }
+
+    sendMessage() {
+        console.log('ffffff');
+        axios.post('https://my-json-server.typicode.com/yschen25/Pizza_maker/db',{
+            name: 'kaka',
+            msg: 'gooooood'
+        }).then(
+            function (response) {
+                console.log(response);
+            }
+        ).catch(
+            function (error) {
+                console.log(error);
+            }
+        );
     }
 
     render() {
@@ -51,15 +69,16 @@ class Pizza extends React.Component {
                 <h1>Pizza Maker</h1>
                 <div className="pizzaWrapper">
                     <div className="pizza">
-                        <Topping selectedToppings={this.state.selectedToppings} />
+                        <Topping selectedToppings={this.state.selectedToppings}/>
                     </div>
                 </div>
                 <div className="menu">
-                    <MenuList toppings={this.state.toppings} chooseToppings={this.chooseToppings} />
+                    <MenuList toppings={this.state.toppings} chooseToppings={this.chooseToppings}/>
                 </div>
+                <MessageBoard sendMessage={this.sendMessage}/>
             </div>
         );
     }
 }
 
-ReactDOM.render(<Pizza />, document.getElementById('app'));
+ReactDOM.render(<Pizza/>, document.getElementById('app'));
