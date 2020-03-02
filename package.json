@@ -8,7 +8,7 @@
     "prod": "set NODE_ENV=prod&& webpack --config webpack.prod.config.js --mode=development"
   },
   "author": "Ka Ka",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.7.4",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
@@ -31,8 +31,6 @@
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.0",
     "postcss-loader": "^3.0.0",
-    "prettier": "^1.19.1",
-    "prettier-eslint": "^9.0.1",
     "raw-loader": "^4.0.0",
     "react-hot-loader": "^4.12.18",
     "sass-loader": "^8.0.0",
@@ -45,7 +43,6 @@
   "dependencies": {
     "@babel/runtime": "^7.8.4",
     "babel-eslint": "^10.0.3",
-    "compass-mixins": "^0.12.10",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-react": "^7.17.0",
