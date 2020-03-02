@@ -3,12 +3,26 @@ import ReactDOM from 'react-dom';
 import MenuList from './component/MenuList';
 import Topping from './component/Topping';
 import toppingsList from './data/Data';
+import axios from 'axios';
 
 class Pizza extends React.Component {
     constructor(props) {
         super(props);
         this.chooseToppings = this.chooseToppings.bind(this);
         this.state = toppingsList;
+    }
+
+
+    componentDidMount(){
+        axios.get('https://my-json-server.typicode.com/yschen25/Pizza_maker/sequence')
+            .then(function (response) {
+
+                console.log('response', response);
+
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     }
 
     // Choose toppings

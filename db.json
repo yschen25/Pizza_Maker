@@ -1,191 +1,52 @@
 {
-  "point-list": [
-    {
-      "point": "0"
+  "toppings": {
+    "bacon": {
+      "number": 12,
+      "isCheck": "noCheck"
     },
-    {
-      "point": "1/2"
+    "mushroom": {
+      "number": 8,
+      "isCheck": "noCheck"
     },
-    {
-      "point": "1"
+    "pepperoni": {
+      "number": 8,
+      "isCheck": "noCheck"
     },
-    {
-      "point": "2"
+    "onion": {
+      "number": 12,
+      "isCheck": "noCheck"
     },
-    {
-      "point": "3"
+    "pineapple": {
+      "number": 8,
+      "isCheck": "noCheck"
     },
-    {
-      "point": "5"
+    "pepper": {
+      "number": 10,
+      "isCheck": "noCheck"
     },
-    {
-      "point": "8"
+    "basil": {
+      "number": 16,
+      "isCheck": "noCheck"
     },
-    {
-      "point": "13"
+    "shrimp": {
+      "number": 10,
+      "isCheck": "noCheck"
     },
-    {
-      "point": "20"
+    "tomato": {
+      "number": 6,
+      "isCheck": "noCheck"
     },
-    {
-      "point": "40"
+    "cucumber": {
+      "number": 8,
+      "isCheck": "noCheck"
     },
-    {
-      "point": "100"
+    "chilli": {
+      "number": 6,
+      "isCheck": "noCheck"
     },
-    {
-      "point": "?"
-    },
-    {
-      "point": "coffee"
+    "olive": {
+      "number": 10,
+      "isCheck": "noCheck"
     }
-  ],
-  "sequence": {
-    "planning-poker": [
-      {
-        "point": "0"
-      },
-      {
-        "point": "1/2"
-      },
-      {
-        "point": "1"
-      },
-      {
-        "point": "2"
-      },
-      {
-        "point": "3"
-      },
-      {
-        "point": "5"
-      },
-      {
-        "point": "8"
-      },
-      {
-        "point": "13"
-      },
-      {
-        "point": "20"
-      },
-      {
-        "point": "40"
-      },
-      {
-        "point": "100"
-      },
-      {
-        "point": "?"
-      },
-      {
-        "point": "coffee"
-      }
-    ],
-    "fibonacci": [
-      {
-        "point": "0"
-      },
-      {
-        "point": "1"
-      },
-      {
-        "point": "2"
-      },
-      {
-        "point": "3"
-      },
-      {
-        "point": "5"
-      },
-      {
-        "point": "8"
-      },
-      {
-        "point": "13"
-      },
-      {
-        "point": "21"
-      },
-      {
-        "point": "34"
-      },
-      {
-        "point": "55"
-      },
-      {
-        "point": "89"
-      },
-      {
-        "point": "144"
-      }
-    ],
-    "natural": [
-      {
-        "point": "1"
-      },
-      {
-        "point": "2"
-      },
-      {
-        "point": "3"
-      },
-      {
-        "point": "4"
-      },
-      {
-        "point": "5"
-      },
-      {
-        "point": "6"
-      },
-      {
-        "point": "7"
-      },
-      {
-        "point": "8"
-      },
-      {
-        "point": "9"
-      },
-      {
-        "point": "10"
-      },
-      {
-        "point": "11"
-      },
-      {
-        "point": "12"
-      },
-      {
-        "point": "13"
-      },
-      {
-        "point": "14"
-      },
-      {
-        "point": "15"
-      },
-      {
-        "point": "16"
-      }
-    ],
-    "t-shirt": [
-      {
-        "point": "XS"
-      },
-      {
-        "point": "S"
-      },
-      {
-        "point": "M"
-      },
-      {
-        "point": "L"
-      },
-      {
-        "point": "XL"
-      }
-    ]
   }
 }
