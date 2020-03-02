@@ -48,5 +48,6 @@
       "number": 10,
       "isCheck": "noCheck"
     }
-  }
+  },
+  "selectedToppings": []
 }

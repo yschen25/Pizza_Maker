@@ -9,16 +9,15 @@ class Pizza extends React.Component {
     constructor(props) {
         super(props);
         this.chooseToppings = this.chooseToppings.bind(this);
-        this.state = toppingsList;
+        this.state = {toppings : {}, selectedToppings: []}
     }
 
-
     componentDidMount(){
-        axios.get('https://my-json-server.typicode.com/yschen25/Pizza_maker/sequence')
+        let _this = this;
+        axios.get('https://my-json-server.typicode.com/yschen25/Pizza_maker/db')
             .then(function (response) {
-
-                console.log('response', response);
-
+                console.log('response', response.data);
+                _this.setState({toppings : response.data});
             })
             .catch(function (error) {
                 console.log(error);
