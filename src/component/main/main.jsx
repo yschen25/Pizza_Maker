@@ -1,7 +1,8 @@
 import React from 'react';
 import MenuList from '../menuList/MenuList';
 import Topping from '../topping/Topping';
-import getNewList from '../../constant/data';
+import {getJsonData} from "../../reducer";
+
 
 class Pizza extends React.Component {
     constructor(props) {
@@ -12,15 +13,8 @@ class Pizza extends React.Component {
 
     // Render
     componentDidMount() {
-        this.getJsonData();
+        // this.getJsonData();
     }
-
-    // Get menu list
-    getJsonData = () => {
-        const _this = this;
-        const data = getNewList();
-        data.then((res) => _this.setState({toppings: res}));
-    };
 
     // Choose toppings
     chooseToppings(e) {
