@@ -10,7 +10,6 @@ class Pizza extends React.Component {
     constructor(props) {
         super(props);
         this.chooseToppings = this.chooseToppings.bind(this);
-        this.sendMessage = this.sendMessage.bind(this);
         this.state = {toppings: {}, selectedToppings: []};
     }
 
@@ -47,20 +46,6 @@ class Pizza extends React.Component {
             this.setState({selectedToppings: [...this.state.selectedToppings, selectedTopping]});
     }
 
-    sendMessage() {
-        axios.post('https://my-json-server.typicode.com/yschen25/Pizza_maker/messageBoard', {
-                name: 'kaka', msg: 'gooooood'}, {headers: { 'Content-Type': 'application/json' }}
-        ).then(
-            function (response) {
-                console.log(response);
-            }
-        ).catch(
-            function (error) {
-                console.log(error);
-            }
-        );
-    }
-
     render() {
         return (
             <div>
@@ -73,7 +58,6 @@ class Pizza extends React.Component {
                 <div className="menu">
                     <MenuList toppings={this.state.toppings} chooseToppings={this.chooseToppings}/>
                 </div>
-                <MessageBoard sendMessage={this.sendMessage}/>
             </div>
         );
     }
