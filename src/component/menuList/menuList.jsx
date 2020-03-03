@@ -6,7 +6,6 @@ class ConnectMenuList extends React.Component {
     constructor(props) {
         super(props);
         this.chooseToppings = this.chooseToppings.bind(this);
-        this.state = {toppings: {}, selectedToppings: []};
     }
 
     // Choose toppings
@@ -60,7 +59,6 @@ class ConnectMenuList extends React.Component {
 //     chooseToppings: PropTypes.func,
 // };
 
-
 const mapStateToProps = state => {
     // state.then((res) => {
     //     return {toppings: res.toppings}
@@ -69,7 +67,6 @@ const mapStateToProps = state => {
     return {toppings: state.toppings}
 };
 
-
-const MenuList = connect(mapStateToProps, null)(ConnectMenuList);
+const MenuList = connect(mapStateToProps)(ConnectMenuList);
 
 export default MenuList;

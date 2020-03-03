@@ -1,6 +1,6 @@
 import React from 'react';
-import MenuList from '../menuList/MenuList';
-import Topping from '../topping/Topping';
+import MenuList from '../menuList/menuList';
+import Topping from '../topping/topping';
 
 class Pizza extends React.Component {
     render() {

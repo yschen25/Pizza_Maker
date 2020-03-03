@@ -5,11 +5,7 @@ const pizzaReducer = (state = getNewList, action) => {
     switch (action.type) {
         case ADD_TOPPINGS:
             break;
-        case CHOOSE_TOPPINGS: {
-            this.state.selectedToppings.includes(selectedTopping) ?
-                this.setState({selectedToppings: [...this.state.selectedToppings.filter(val => val !== selectedTopping)]}) :
-                this.setState({selectedToppings: [...this.state.selectedToppings, selectedTopping]});
-        }
+        case CHOOSE_TOPPINGS:
             break;
         default:
             // return getNewList();
