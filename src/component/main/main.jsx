@@ -3,11 +3,6 @@ import MenuList from '../menuList/MenuList';
 import Topping from '../topping/Topping';
 
 class Pizza extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {toppings: {}, selectedToppings: []};
-    }
-
     render() {
         return (
             <div>
