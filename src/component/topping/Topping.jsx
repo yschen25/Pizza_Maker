@@ -36,10 +36,12 @@ class ConnectTopping extends React.Component {
 //     selectedToppings: PropTypes.instanceOf(Array)
 // };
 
-const mapStateToProps = state =>{
-    state.then((res)=>{
-        return {selectedToppings : res.selectedToppings}
-    });
+const mapStateToProps = state => {
+    // state.then((res) => {
+    //     return {selectedToppings: res.selectedToppings}
+    // });
+
+    return {selectedToppings: state.selectedToppings}
 };
 
 const Topping = connect(mapStateToProps)(ConnectTopping);

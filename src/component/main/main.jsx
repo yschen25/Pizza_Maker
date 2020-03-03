@@ -5,31 +5,7 @@ import Topping from '../topping/Topping';
 class Pizza extends React.Component {
     constructor(props) {
         super(props);
-        this.chooseToppings = this.chooseToppings.bind(this);
         this.state = {toppings: {}, selectedToppings: []};
-    }
-
-    // Render
-    componentDidMount() {
-        // this.getJsonData();
-    }
-
-    // Choose toppings
-    chooseToppings(e) {
-
-        // Show check icon
-        const check = e.target.getAttribute('data-check');
-        const newCheck = (check === 'check') ? 'noCheck' : 'check';
-        this.setState({
-            toppings: {
-                ...this.state.toppings,
-                [e.target.id]: {number: e.target.getAttribute('data-number'), isCheck: newCheck}
-            }
-        });
-
-        // Combine topping's name and quantity
-        const selectedTopping = e.target.id + '/' + e.target.getAttribute('data-number');
-        this.props.chooseToppings(selectedTopping);
     }
 
     render() {
@@ -38,11 +14,11 @@ class Pizza extends React.Component {
                 <h1>Pizza Maker</h1>
                 <div className="pizzaWrapper">
                     <div className="pizza">
-                        <Topping />
+                        <Topping/>
                     </div>
                 </div>
                 <div className="menu">
-                    <MenuList />
+                    <MenuList/>
                 </div>
             </div>
         );
