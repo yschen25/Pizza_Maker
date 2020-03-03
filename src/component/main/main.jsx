@@ -1,8 +1,6 @@
 import React from 'react';
 import MenuList from '../menuList/MenuList';
 import Topping from '../topping/Topping';
-import {getJsonData} from "../../reducer";
-
 
 class Pizza extends React.Component {
     constructor(props) {

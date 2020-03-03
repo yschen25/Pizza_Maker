@@ -28,18 +28,18 @@ class ConnectTopping extends React.Component {
     }
 }
 
-ConnectTopping.defaultProps = {
-    selectedToppings: '',
-};
-
-ConnectTopping.propTypes = {
-    selectedToppings: PropTypes.instanceOf(Array)
-};
+// ConnectTopping.defaultProps = {
+//     selectedToppings: '',
+// };
+//
+// ConnectTopping.propTypes = {
+//     selectedToppings: PropTypes.instanceOf(Array)
+// };
 
 const mapStateToProps = state =>{
-
-    console.log('ss', state);
-    return {selectedToppings : state.data.selectedToppings}
+    state.then((res)=>{
+        return {selectedToppings : res.selectedToppings}
+    });
 };
 
 const Topping = connect(mapStateToProps)(ConnectTopping);

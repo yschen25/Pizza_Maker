@@ -22,21 +22,21 @@ class ConnectMenuList extends React.Component {
         });
     }
 }
-
-ConnectMenuList.defaultProps = {
-    toppings: '',
-    chooseToppings: ''
-};
-
-ConnectMenuList.propTypes = {
-    toppings: PropTypes.instanceOf(Object),
-    chooseToppings: PropTypes.func,
-};
+//
+// ConnectMenuList.defaultProps = {
+//     toppings: '',
+//     chooseToppings: ''
+// };
+//
+// ConnectMenuList.propTypes = {
+//     toppings: PropTypes.instanceOf(Object),
+//     chooseToppings: PropTypes.func,
+// };
 
 const mapStateToProps = state =>{
-    // console.log('dd', state);
-
-    return {toppings : state.data.toppings}
+    state.then((res)=>{
+        return {toppings : res.toppings}
+    });
 };
 
 const mapDispatchToProps = dispatch => {

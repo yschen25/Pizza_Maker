@@ -12,12 +12,7 @@ const pizzaReducer = (state = getNewList, action) => {
         }
             break;
         default:
-            return getJsonData = () => {
-                const _this = this;
-                const data = getNewList();
-                data.then((res) => _this.setState({toppings: res}));
-            };
-
+                return getNewList();
     }
 };
 
