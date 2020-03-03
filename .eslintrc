@@ -38,8 +38,7 @@
     "global-require": 0,
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/jsx-props-no-spreading": 0,
-    "prettier/prettier": "error"
+    "react/jsx-props-no-spreading": 0
   },
   "env": {
     "es6": true,

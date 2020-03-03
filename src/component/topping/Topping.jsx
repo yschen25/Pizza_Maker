@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {connect} from "react-redux";
 
-class Topping extends React.Component {
+class ConnectTopping extends React.Component {
     constructor(props) {
         super(props);
         this.toppingHtml = this.toppingHtml.bind(this);
@@ -27,12 +28,20 @@ class Topping extends React.Component {
     }
 }
 
-Topping.defaultProps = {
+ConnectTopping.defaultProps = {
     selectedToppings: '',
 };
 
-Topping.propTypes = {
+ConnectTopping.propTypes = {
     selectedToppings: PropTypes.instanceOf(Array)
 };
+
+const mapStateToProps = state =>{
+
+    console.log('ss', state);
+    return {selectedToppings : state.data.selectedToppings}
+};
+
+const Topping = connect(mapStateToProps)(ConnectTopping);
 
 export default Topping;

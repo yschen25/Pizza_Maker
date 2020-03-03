@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {connect} from "react-redux";
+import {chooseToppings} from '../../action';
 
-class MenuList extends React.Component {
+class ConnectMenuList extends React.Component {
     render() {
         return Object.entries(this.props.toppings).map((val) => {
             return (
@@ -21,14 +23,28 @@ class MenuList extends React.Component {
     }
 }
 
-MenuList.defaultProps = {
+ConnectMenuList.defaultProps = {
     toppings: '',
     chooseToppings: ''
 };
 
-MenuList.propTypes = {
+ConnectMenuList.propTypes = {
     toppings: PropTypes.instanceOf(Object),
     chooseToppings: PropTypes.func,
 };
+
+const mapStateToProps = state =>{
+    // console.log('dd', state);
+
+    return {toppings : state.data.toppings}
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        chooseToppings : val =>{ dispatch(chooseToppings(val)) }
+    }
+};
+
+const MenuList = connect(mapStateToProps,mapDispatchToProps)(ConnectMenuList);
 
 export default MenuList;

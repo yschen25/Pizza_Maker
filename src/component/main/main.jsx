@@ -1,10 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import MenuList from './component/MenuList';
-import Topping from './component/Topping';
-import MessageBoard from './component/MessageBoard';
-import getNewList from './data/Data';
-import axios from 'axios/index';
+import MenuList from '../menuList/MenuList';
+import Topping from '../topping/Topping';
+import getNewList from '../../constant/data';
 
 class Pizza extends React.Component {
     constructor(props) {
@@ -40,10 +37,7 @@ class Pizza extends React.Component {
 
         // Combine topping's name and quantity
         const selectedTopping = e.target.id + '/' + e.target.getAttribute('data-number');
-
-        this.state.selectedToppings.includes(selectedTopping) ?
-            this.setState({selectedToppings: [...this.state.selectedToppings.filter(val => val !== selectedTopping)]}) :
-            this.setState({selectedToppings: [...this.state.selectedToppings, selectedTopping]});
+        this.props.chooseToppings(selectedTopping);
     }
 
     render() {
@@ -52,15 +46,15 @@ class Pizza extends React.Component {
                 <h1>Pizza Maker</h1>
                 <div className="pizzaWrapper">
                     <div className="pizza">
-                        <Topping selectedToppings={this.state.selectedToppings}/>
+                        <Topping />
                     </div>
                 </div>
                 <div className="menu">
-                    <MenuList toppings={this.state.toppings} chooseToppings={this.chooseToppings}/>
+                    <MenuList />
                 </div>
             </div>
         );
     }
 }
 
-ReactDOM.render(<Pizza/>, document.getElementById('app'));
+export {Pizza};
