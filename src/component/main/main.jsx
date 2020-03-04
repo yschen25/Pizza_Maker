@@ -1,8 +1,14 @@
 import React from 'react';
 import MenuList from '../menuList/menuList';
 import Topping from '../topping/topping';
+import getNewList from "../../constant/data";
 
 class Pizza extends React.Component {
+
+    componentDidMount(){
+        getNewList();
+    }
+
     render() {
         return (
             <div>

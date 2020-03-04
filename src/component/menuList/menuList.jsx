@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from "react-redux";
+import getNewList from "../../constant/data";
 
 class ConnectMenuList extends React.Component {
     constructor(props) {
@@ -59,12 +60,12 @@ class ConnectMenuList extends React.Component {
 //     chooseToppings: PropTypes.func,
 // };
 
-const mapStateToProps = state => {
-    // state.then((res) => {
-    //     return {toppings: res.toppings}
-    // });
-
+const mapStateToProps = async () => {
+    const state = await getNewList();
+    console.log('state.toppings', state.toppings);
     return {toppings: state.toppings}
+
+    // return {toppings: state.toppings}
 };
 
 const MenuList = connect(mapStateToProps)(ConnectMenuList);

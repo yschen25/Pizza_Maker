@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from "react-redux";
+import getNewList from "../../constant/data";
 
 class ConnectTopping extends React.Component {
     constructor(props) {
@@ -36,12 +37,12 @@ class ConnectTopping extends React.Component {
 //     selectedToppings: PropTypes.instanceOf(Array)
 // };
 
-const mapStateToProps = state => {
-    // state.then((res) => {
-    //     return {selectedToppings: res.selectedToppings}
-    // });
-
+const mapStateToProps = async () => {
+    const state = await getNewList();
+    console.log('state.selectedToppings', state.selectedToppings);
     return {selectedToppings: state.selectedToppings}
+
+    // return {selectedToppings: state.selectedToppings}
 };
 
 const Topping = connect(mapStateToProps)(ConnectTopping);
