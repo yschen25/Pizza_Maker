@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from "react-redux";
+import {ADD_TOPPINGS} from '../../constant/actionType';
+import {addToppings} from '../../action/addToppings';
 
 class ConnectMenuList extends React.Component {
     constructor(props) {
@@ -29,22 +31,26 @@ class ConnectMenuList extends React.Component {
     }
 
     render() {
-        return Object.entries(this.props.toppings).map((val) => {
-            return (
-                <div
-                    key={val[0]}
-                    id={val[0]}
-                    data-number={val[1].number}
-                    data-check={val[1].isCheck}
-                    className="item"
-                    onClick={this.chooseToppings}>
-                    <div className={`${val[0]} img`}></div>
-                    <div className="text">{val[0].charAt(0).toUpperCase() + val[0].slice(1)}</div>
-                    {(val[1].isCheck) === 'check' ? <div className="check isChecked"></div> :
-                        <div className="check"></div>}
-                </div>
-            );
-        });
+        if (this.props.toppings === null || this.props.toppings === undefined) {
+            return '';
+        } else {
+            return Object.entries(this.props.toppings).map((val) => {
+                return (
+                    <div
+                        key={val[0]}
+                        id={val[0]}
+                        data-number={val[1].number}
+                        data-check={val[1].isCheck}
+                        className="item"
+                        onClick={this.chooseToppings}>
+                        <div className={`${val[0]} img`}></div>
+                        <div className="text">{val[0].charAt(0).toUpperCase() + val[0].slice(1)}</div>
+                        {(val[1].isCheck) === 'check' ? <div className="check isChecked"></div> :
+                            <div className="check"></div>}
+                    </div>
+                );
+            });
+        }
     }
 }
 
@@ -59,10 +65,17 @@ class ConnectMenuList extends React.Component {
 //     chooseToppings: PropTypes.func,
 // };
 
-const mapStateToProps =  state => {
+const mapStateToProps = () => {
+    console.log('state.toppings', state.toppings);
     return {toppings: state.toppings}
 };
 
-const MenuList = connect(mapStateToProps)(ConnectMenuList);
+const mapDispatchToProps = dispatch => {
+    return {
+        addToppings: article => dispatch(addToppings(article))
+    }
+};
+
+const MenuList = connect(mapStateToProps, mapDispatchToProps)(ConnectMenuList);
 
 export default MenuList;

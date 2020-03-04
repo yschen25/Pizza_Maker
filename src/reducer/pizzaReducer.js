@@ -1,14 +1,14 @@
 import {ADD_TOPPINGS, CHOOSE_TOPPINGS} from '../constant/actionType';
-import getNewList from '../constant/data';
+import response from '../constant/data';
 
-const pizzaReducer = (state = getNewList, action) => {
+const pizzaReducer = (state = response, action) => {
     switch (action.type) {
         case ADD_TOPPINGS:
-            break;
+            return response;
         case CHOOSE_TOPPINGS:
             break;
         default:
-            return getNewList;
+            return response; // 不要在 reducer 做非同步
     }
 };
 

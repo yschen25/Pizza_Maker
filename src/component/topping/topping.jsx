@@ -9,16 +9,21 @@ class ConnectTopping extends React.Component {
     }
 
     toppingHtml() {
-        return this.props.selectedToppings.map((val) => {
 
-            const arr = val.split('/');
+        if (this.props.toppings === null || this.props.toppings === undefined) {
+            return '';
+        } else {
+            return this.props.selectedToppings.map((val) => {
 
-            const html = [];
-            for (let i = 1; i <= arr[1]; i++) {
-                html.push(<div key={i} className={`${arr[0]}-list ${arr[0]}-${i}`}></div>);
-            }
-            return html;
-        });
+                const arr = val.split('/');
+
+                const html = [];
+                for (let i = 1; i <= arr[1]; i++) {
+                    html.push(<div key={i} className={`${arr[0]}-list ${arr[0]}-${i}`}></div>);
+                }
+                return html;
+            });
+        }
     }
 
     render() {
@@ -36,7 +41,9 @@ class ConnectTopping extends React.Component {
 //     selectedToppings: PropTypes.instanceOf(Array)
 // };
 
-const mapStateToProps = state => {
+const mapStateToProps = () => {
+
+    console.log('state.selectedToppings', state.selectedToppings);
     return {selectedToppings: state.selectedToppings}
 };
 
