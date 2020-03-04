@@ -8,7 +8,7 @@ const pizzaReducer = (state = getNewList, action) => {
         case CHOOSE_TOPPINGS:
             break;
         default:
-            return getNewList();
+            return getNewList;
     }
 };
 
