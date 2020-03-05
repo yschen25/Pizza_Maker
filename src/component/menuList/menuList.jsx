@@ -1,73 +1,85 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import {connect} from "react-redux";
-import getNewList from "../../constant/data";
+import { chooseToppings } from '../../action';
+import { changeToppingItemStatus } from '../../action/changeToppingItemStatus';
+import { removeToppings } from '../../action/removeToppings';
 
-class ConnectMenuList extends React.Component {
-    constructor(props) {
-        super(props);
-        this.chooseToppings = this.chooseToppings.bind(this);
-    }
-
+class MenuList extends React.Component {
     // Choose toppings
-    chooseToppings(e) {
+    chooseToppings(name, isChecked) {
+        const { dispatchChooseToppings, dispatchRemoveToppings, dispatchChangeToppingItemStatus } = this.props;
 
-        // Show check icon
-        const check = e.target.getAttribute('data-check');
-        const newCheck = (check === 'check') ? 'noCheck' : 'check';
-        this.setState({
-            toppings: {
-                ...this.state.toppings,
-                [e.target.id]: {number: e.target.getAttribute('data-number'), isCheck: newCheck}
-            }
+        if (isChecked) {
+            // choose
+            dispatchRemoveToppings(name);
+        } else {
+            // remove
+            dispatchChooseToppings(name);
+        }
+
+        // change status
+        dispatchChangeToppingItemStatus({
+            name,
+            isCheck: isChecked
         });
-
-        // Combine topping's name and quantity
-        const selectedTopping = e.target.id + '/' + e.target.getAttribute('data-number');
-        this.state.selectedToppings.includes(selectedTopping) ?
-            this.setState({selectedToppings: [...this.state.selectedToppings.filter(val => val !== selectedTopping)]}) :
-            this.setState({selectedToppings: [...this.state.selectedToppings, selectedTopping]});
     }
 
     render() {
-        return Object.entries(this.props.toppings).map((val) => {
-            return (
+        const { toppings } = this.props;
+
+        return Object.entries(toppings)
+            .map((val) => (
                 <div
                     key={val[0]}
-                    id={val[0]}
-                    data-number={val[1].number}
-                    data-check={val[1].isCheck}
                     className="item"
-                    onClick={this.chooseToppings}>
-                    <div className={`${val[0]} img`}></div>
-                    <div className="text">{val[0].charAt(0).toUpperCase() + val[0].slice(1)}</div>
-                    {(val[1].isCheck) === 'check' ? <div className="check isChecked"></div> :
-                        <div className="check"></div>}
+                    onClick={() => this.chooseToppings(val[0], val[1].isCheck === 'check')}
+                >
+                    <div className={`${val[0]} img`} />
+                    <div className="text">
+                        {
+                            val[0].charAt(0)
+                                .toUpperCase() + val[0].slice(1)
+                        }
+                    </div>
+                    {
+                        (val[1].isCheck) === 'check' ? <div className="check isChecked" />
+                            : <div className="check" />
+                    }
                 </div>
-            );
-        });
+            ));
     }
 }
 
 //
-// ConnectMenuList.defaultProps = {
-//     toppings: '',
-//     chooseToppings: ''
-// };
-//
-// ConnectMenuList.propTypes = {
-//     toppings: PropTypes.instanceOf(Object),
-//     chooseToppings: PropTypes.func,
-// };
-
-const mapStateToProps = async () => {
-    const state = await getNewList();
-    console.log('state.toppings', state.toppings);
-    return {toppings: state.toppings}
-
-    // return {toppings: state.toppings}
+MenuList.defaultProps = {
+    toppings: {}
 };
 
-const MenuList = connect(mapStateToProps)(ConnectMenuList);
+MenuList.propTypes = {
+    toppings: PropTypes.shape({
+        number: PropTypes.number,
+        isCheck: PropTypes.string
+    }),
+    dispatchChooseToppings: PropTypes.func.isRequired,
+    dispatchRemoveToppings: PropTypes.func.isRequired,
+    dispatchChangeToppingItemStatus: PropTypes.func.isRequired
+};
 
-export default MenuList;
+const mapStateToProps = (state) => ({
+    toppings: state.pizza.toppings
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    dispatchChooseToppings: (name) => {
+        dispatch(chooseToppings(name));
+    },
+    dispatchRemoveToppings: (name) => {
+        dispatch(removeToppings(name));
+    },
+    dispatchChangeToppingItemStatus: (selected) => {
+        dispatch(changeToppingItemStatus(selected));
+    }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(MenuList);

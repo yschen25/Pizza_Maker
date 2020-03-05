@@ -1,5 +1,6 @@
-import {ADD_TOPPINGS} from '../constant/actionType';
+import { ADD_TOPPINGS } from '../constant/actionType';
 
-export const addToppings = (val) => ({
-    type: ADD_TOPPINGS, payload: val
+export const addToppings = (toppings) => ({
+    type: ADD_TOPPINGS,
+    payload: toppings
 });

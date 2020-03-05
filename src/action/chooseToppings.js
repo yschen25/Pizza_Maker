@@ -1,5 +1,6 @@
-import {CHOOSE_TOPPINGS} from '../constant/actionType';
+import { CHOOSE_TOPPINGS } from '../constant/actionType';
 
-export const chooseToppings = (val) => ({
-    type: CHOOSE_TOPPINGS, payload: val
+export const chooseToppings = (name) => ({
+    type: CHOOSE_TOPPINGS,
+    payload: name
 });
