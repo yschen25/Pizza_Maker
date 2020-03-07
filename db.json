@@ -1,51 +1,51 @@
 {
   "toppings": {
     "bacon": {
-      "number": 12,
+      "quantity": 12,
       "isCheck": "noCheck"
     },
     "mushroom": {
-      "number": 8,
+      "quantity": 8,
       "isCheck": "noCheck"
     },
     "pepperoni": {
-      "number": 8,
+      "quantity": 8,
       "isCheck": "noCheck"
     },
     "onion": {
-      "number": 12,
+      "quantity": 12,
       "isCheck": "noCheck"
     },
     "pineapple": {
-      "number": 8,
+      "quantity": 8,
       "isCheck": "noCheck"
     },
     "pepper": {
-      "number": 10,
+      "quantity": 10,
       "isCheck": "noCheck"
     },
     "basil": {
-      "number": 16,
+      "quantity": 16,
       "isCheck": "noCheck"
     },
     "shrimp": {
-      "number": 10,
+      "quantity": 10,
       "isCheck": "noCheck"
     },
     "tomato": {
-      "number": 6,
+      "quantity": 6,
       "isCheck": "noCheck"
     },
     "cucumber": {
-      "number": 8,
+      "quantity": 8,
       "isCheck": "noCheck"
     },
     "chilli": {
-      "number": 6,
+      "quantity": 6,
       "isCheck": "noCheck"
     },
     "olive": {
-      "number": 10,
+      "quantity": 10,
       "isCheck": "noCheck"
     }
   },

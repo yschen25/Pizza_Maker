@@ -4,12 +4,14 @@ import PropTypes from 'prop-types';
 
 class Topping extends React.Component {
     render() {
+
+        // Object destructuring
         const { toppings, selectedToppings } = this.props;
 
         return (
             <div>
                 {
-                    selectedToppings.map((name) => Array(toppings[name].number)
+                    selectedToppings.map((name) => Array(toppings[name].quantity)
                         .fill(0)
                         .map((value, index) => index + 1)
                         .map((n) => (
@@ -31,7 +33,7 @@ Topping.defaultProps = {
 
 Topping.propTypes = {
     toppings: PropTypes.shape({
-        number: PropTypes.number,
+        quantity: PropTypes.number,
         isCheck: PropTypes.string
     }),
     selectedToppings: PropTypes.arrayOf(

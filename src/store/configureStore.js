@@ -3,10 +3,10 @@ import pizzaReducer from '../reducer';
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const todoApp = combineReducers({
+const makerApp = combineReducers({
     pizza: pizzaReducer
 });
 
-const store = createStore(todoApp, {}, composeEnhancer());
+const store = createStore(makerApp, {}, composeEnhancer());
 
 export default store;

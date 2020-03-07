@@ -11,14 +11,14 @@ class MenuList extends React.Component {
         const { dispatchChooseToppings, dispatchRemoveToppings, dispatchChangeToppingItemStatus } = this.props;
 
         if (isChecked) {
-            // choose
+            // Remove
             dispatchRemoveToppings(name);
         } else {
-            // remove
+            // Choose
             dispatchChooseToppings(name);
         }
 
-        // change status
+        // Change status
         dispatchChangeToppingItemStatus({
             name,
             isCheck: isChecked

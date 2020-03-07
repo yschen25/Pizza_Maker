@@ -10,7 +10,7 @@ class Pizza extends React.Component {
     componentDidMount() {
         const { dispatchAddToppingsState } = this.props;
 
-        // getNewList();
+        // Get data
         axios.get('https://my-json-server.typicode.com/yschen25/Pizza_maker/db')
             .then((response) => {
                 dispatchAddToppingsState(response.data);
