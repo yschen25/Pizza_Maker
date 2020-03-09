@@ -13,11 +13,10 @@ class Topping extends React.Component {
                 {
                     selectedToppings.map((name) => Array(toppings[name].quantity)
                         .fill(0)
-                        .map((value, index) => index + 1)
-                        .map((n) => (
+                        .map((value, index) => (
                             <div
-                                key={`${name}_${n}`}
-                                className={`${name}-list ${name}-${n}`}
+                                key={`${name}_${index}`}
+                                className={`${name}-list ${name}-${index + 1}`}
                             />
                         )))
                 }
