@@ -6,7 +6,7 @@ Make your own pizza.
 
 ## Demo
 
-### **[FIND ME LUNCH](http://www.yschen25.com/portfolio/pizzaMaker/) -> Where You Can See the Website**
+### **[PIZZA_MAKER](http://www.yschen25.com/portfolio/pizzaMaker/) -> Where You Can See the Website**
 <br/>
 
 <p align="enter">
