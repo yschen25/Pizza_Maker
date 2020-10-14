@@ -6,7 +6,7 @@ Make your own pizza.
 
 ## Demo
 
-### **[PIZZA_MAKER](http://www.yschen25.com/portfolio/pizzaMaker/) -> Where You Can See the Website**
+### **[PIZZA_MAKER](https://yschen25.github.io/Pizza_Maker/) -> Where You Can See the Website**
 <br/>
 
 <p align="enter">
